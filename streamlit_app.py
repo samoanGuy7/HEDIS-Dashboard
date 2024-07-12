@@ -35,6 +35,7 @@ def authenticate(email, password):
         if "access" in data and "refresh" in data:
             st.session_state["access_token"] = data["access"]
             st.session_state["refresh_token"] = data["refresh"]
+            st.info("it worked!")
             return True
         else:
             return False
