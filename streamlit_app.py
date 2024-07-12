@@ -15,18 +15,19 @@ def title_menu():
 # Function for the login page
 def login_page():
     st.title("Login")
-    username = st.text_input("Email")
+    email = st.text_input("Email")
     password = st.text_input("Password", type="password")
     if st.button("Login"):
-        if authenticate(username, password):
+        if authenticate(email, password):
             st.session_state["logged_in"] = True
+            st.experimental_rerun()  # Force rerun to redirect to main content
         else:
-            st.error("Invalid username or password")
+            st.error("Invalid email or password")
 
 # Function to authenticate the user with the API
-def authenticate(username, password):
-    url = "https://izife981fidwfw-8000.proxy.runpod.net/auth/jwt/create/"  # Replace with your login API URL
-    payload = {"email": username, "password": password}
+def authenticate(email, password):
+    url = "https://izife981fidwfw-8000.proxy.runpod.net/admin/"  # Replace with your login API URL
+    payload = {"email": email, "password": password}
     try:
         response = requests.post(url, json=payload)
         response.raise_for_status()
@@ -34,7 +35,6 @@ def authenticate(username, password):
         if "access" in data and "refresh" in data:
             st.session_state["access_token"] = data["access"]
             st.session_state["refresh_token"] = data["refresh"]
-            st.info('true')
             return True
         else:
             return False
