@@ -26,7 +26,7 @@ def login_page():
 
 # Function to authenticate the user with the API
 def authenticate(email, password):
-    url = "https://izife981fidwfw-8000.proxy.runpod.net/admin/"  # Replace with your login API URL
+    url = "https://izife981fidwfw-8000.proxy.runpod.net/auth/jwt/create/"  # Replace with your login API URL
     payload = {"email": email, "password": password}
     try:
         response = requests.post(url, json=payload)
