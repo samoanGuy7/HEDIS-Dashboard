@@ -60,6 +60,25 @@ def main_content():
     if "page" not in st.session_state:
         st.session_state.page = "Home"
 
+# Function to authenticate the user with the API
+def authenticate(email, password):
+    url = "https://izife981fidwfw-8000.proxy.runpod.net/auth/jwt/create/"  # Replace with your login API URL
+    payload = {"email": email, "password": password}
+    try:
+        response = requests.post(url, json=payload)
+        response.raise_for_status()
+        data = response.json()
+        if "access" in data and "refresh" in data:
+            st.session_state["access_token"] = data["access"]
+            st.session_state["refresh_token"] = data["refresh"]
+            st.info("it worked!")
+            return True
+        else:
+            return False
+    except requests.exceptions.RequestException as e:
+        st.error(f"An error occurred: {e}")
+        return False
+
     title_menu()
 
     # Custom navigation menu in sidebar
