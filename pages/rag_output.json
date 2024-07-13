@@ -1,0 +1,135 @@
+[
+    {
+        "measures": [
+          {
+            "name": "Annual Wellness Visit",
+            "code": "AWV",
+            "value": null,
+            "status": "Met",
+            "date": "2023-06-15",
+            "sub_measures": [],
+            "source": "/content/patient1.xml",
+            "json_excerpt": "{\n  \"patient_id\": \"patient1\",\n  \"patient_name\": \"John Smith\",\n  \"patient_gender\": \"male\",\n  \"patient_birthDate\": \"1975-03-15\",\n  \"condition\": \"Hypertensive disorder\",\n  \"condition_date\": \"2020-01-10\",\n  \"encounter_type\": \"Annual wellness visit\",\n  \"encounter_date\": \"2023-06-15\",\n  \"observations\": [\n    {\n      \"type\": \"Blood Pressure\",\n      \"systolic\": \"135\",\n      \"diastolic\": \"85\",\n      \"date\": \"2023-06-15\"\n    }\n  ]\n}"
+          },
+          {
+            "name": "Controlling High Blood Pressure",
+            "code": "CBP",
+            "value": "135/85",
+            "status": "Met",
+            "date": "2023-06-15",
+            "sub_measures": [],
+            "source": "/content/patient1.xml",
+            "json_excerpt": "{\n  \"patient_id\": \"patient1\",\n  \"patient_name\": \"John Smith\",\n  \"patient_gender\": \"male\",\n  \"patient_birthDate\": \"1975-03-15\",\n  \"condition\": \"Hypertensive disorder\",\n  \"condition_date\": \"2020-01-10\",\n  \"encounter_type\": \"Annual wellness visit\",\n  \"encounter_date\": \"2023-06-15\",\n  \"observations\": [\n    {\n      \"type\": \"Blood Pressure\",\n      \"systolic\": \"135\",\n      \"diastolic\": \"85\",\n      \"date\": \"2023-06-15\"\n    }\n  ]\n}"
+          },
+          {
+            "name": "Comprehensive Diabetes Care",
+            "code": "CDC",
+            "value": null,
+            "status": "Not Met",
+            "date": null,
+            "sub_measures": [
+              {
+                "name": "Hemoglobin A1c (HbA1c) testing",
+                "status": "Not Met",
+                "value": null,
+                "date": null
+              },
+              {
+                "name": "HbA1c poor control (>9.0%)",
+                "status": "Not Met",
+                "value": null,
+                "date": null
+              },
+              {
+                "name": "HbA1c control (<8.0%)",
+                "status": "Not Met",
+                "value": null,
+                "date": null
+              },
+              {
+                "name": "Eye exam (retinal) performed",
+                "status": "Not Met",
+                "value": null,
+                "date": null
+              },
+              {
+                "name": "Medical attention for nephropathy",
+                "status": "Not Met",
+                "value": null,
+                "date": null
+              },
+              {
+                "name": "BP control (<140/90 mm Hg)",
+                "status": "Met",
+                "value": "135/85",
+                "date": "2023-06-15"
+              }
+            ],
+            "source": "/content/patient1.xml",
+            "json_excerpt": "{\n  \"patient_id\": \"patient1\",\n  \"patient_name\": \"John Smith\",\n  \"patient_gender\": \"male\",\n  \"patient_birthDate\": \"1975-03-15\",\n  \"condition\": \"Hypertensive disorder\",\n  \"condition_date\": \"2020-01-10\",\n  \"encounter_type\": \"Annual wellness visit\",\n  \"encounter_date\": \"2023-06-15\",\n  \"observations\": [\n    {\n      \"type\": \"Blood Pressure\",\n      \"systolic\": \"135\",\n      \"diastolic\": \"85\",\n      \"date\": \"2023-06-15\"\n    }\n  ]\n}"
+          }
+        ]
+      },
+    {
+        "measures": [
+          {
+            "name": "Annual Wellness Visit",
+            "code": "AWV",
+            "value": null,
+            "status": "Met",
+            "date": "2023-03-15",
+            "sub_measures": [],
+            "source": "/content/patient2.xml",
+            "json_excerpt": "{\n  \"encounter_type\": \"Annual wellness visit\",\n  \"encounter_date\": \"2023-03-15\",\n  \"observations\": [\n    {\n      \"type\": \"Hemoglobin A1c\",\n      \"value\": \"9.5\",\n      \"date\": \"2023-03-15\"\n    }\n  ]\n}"
+          },
+          {
+            "name": "Comprehensive Diabetes Care",
+            "code": "CDC",
+            "value": null,
+            "status": "Not Met",
+            "date": null,
+            "sub_measures": [
+              {
+                "name": "Hemoglobin A1c (HbA1c) testing",
+                "status": "Met",
+                "value": "9.5",
+                "date": "2023-03-15"
+              },
+              {
+                "name": "HbA1c poor control (>9.0%)",
+                "status": "Not Met",
+                "value": "9.5",
+                "date": "2023-03-15"
+              },
+              {
+                "name": "HbA1c control (<8.0%)",
+                "status": "Not Met",
+                "value": "9.5",
+                "date": "2023-03-15"
+              },
+              {
+                "name": "Eye exam (retinal) performed",
+                "status": "Not Met",
+                "value": null,
+                "date": null
+              },
+              {
+                "name": "Medical attention for nephropathy",
+                "status": "Not Met",
+                "value": null,
+                "date": null
+              },
+              {
+                "name": "BP control (<140/90 mm Hg)",
+                "status": "Not Met",
+                "value": null,
+                "date": null
+              }
+            ],
+            "source": "/content/patient2.xml",
+            "json_excerpt": "{\n  \"encounter_type\": \"Annual wellness visit\",\n  \"encounter_date\": \"2023-03-15\",\n  \"observations\": [\n    {\n      \"type\": \"Hemoglobin A1c\",\n      \"value\": \"9.5\",\n      \"date\": \"2023-03-15\"\n    }\n  ]\n}"
+          }
+        ]
+      }
+    
+    ]
